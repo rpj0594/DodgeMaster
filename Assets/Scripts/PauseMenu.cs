@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] private GameObject OptionsPanel;
     public void Pause()
     {
         // When button is pressed the pause menu will open
@@ -39,6 +40,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Settings()
     {
+        OptionsPanel.SetActive(true);
+        pauseMenu.SetActive(false);
 
     }
 }
